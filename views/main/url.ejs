@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <!-- <link href="../css/style.css" rel="stylesheet" type="text/css"> -->
+    <title>Movie List - Now Playing</title>
+</head>
+
+<body>
+    <header>NOW PLAYING</header>
+    <% posters.forEach((element) => { %>
+        <section id="movieList">
+            <div> <img id="poster" src="<%= `https://image.tmdb.org/t/p/w200/${element.poster_path}` %>" /></div>
+
+            <section id="title">
+                <%=element.title %>
+            </section>
+
+            <section id="overview">
+                <%=element.overview %>
+            </section>
+            </div>
+
+            <% }) %>
+        </section>
+</body>
+
+</html>
